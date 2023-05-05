@@ -1,0 +1,12 @@
+button {
+ width: 200px;
+ height: 100px;
+}
+button::before {
+ content: "Pasa por encima";
+}
+button:hover {
+ background-color: green;
+ content-visibility: hidden;
+}
+button:
