@@ -7,6 +7,7 @@ button::before {
 }
 button:hover {
  background-color: green;
- content-visibility: hidden;
 }
-button:
+button:hover::before {
+ content: "Hecho!";
+}
