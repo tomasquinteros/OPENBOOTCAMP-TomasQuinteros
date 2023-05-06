@@ -1,0 +1,22 @@
+.btn, .btn-2 {
+  color: green;
+  padding: 0.25rem 0.5rem;
+  background-color: gray;
+  border-radius: 0.25rem;
+  transition: box-shadow 150ms;
+  border: none;
+}
+.btn:hover, .btn-2:hover {
+  box-shadow: 0px 0px 5px #aaa;
+}
+
+.btn-2 {
+  background-color: #ee54ee;
+  color: white;
+}
+
+h1 {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

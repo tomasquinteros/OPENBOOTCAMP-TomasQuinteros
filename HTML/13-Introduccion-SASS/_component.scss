@@ -1,0 +1,19 @@
+@use "maxins" as default;
+
+.btn {
+ color: default.$f-color-btn;
+ padding: 0.25rem 0.5rem;
+ background-color: gray;
+ border-radius: 0.25rem;
+ transition: box-shadow 150ms;
+ border: none;
+ &:hover {
+  box-shadow: 0px 0px 5px #aaa;
+ }
+}
+
+.btn-2 {
+ @extend .btn;
+ background-color: #ee54ee;
+ color: white;
+}
