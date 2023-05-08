@@ -1,0 +1,85 @@
+.btn-main, .btn-main-small {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: x-large;
+  background-color: #0075FF;
+  border: 0.1rem solid #0075FF;
+  color: white;
+}
+.btn-main:hover, .btn-main-small:hover {
+  background-color: #eee;
+  color: #0075FF;
+  transition: all 250ms;
+  border: 0.1rem solid #0075FF;
+}
+.btn-main-small {
+  font-size: large;
+  padding: 0.1rem 0.1rem;
+}
+
+.btn-secondary, .btn-secondary-small {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: x-large;
+  background-color: #eee;
+  border: none;
+  color: black;
+}
+.btn-secondary:hover, .btn-secondary-small:hover {
+  background-color: #eee;
+  color: #0075FF;
+  transition: all 250ms;
+}
+.btn-secondary-small {
+  font-size: large;
+  padding: 0.1rem 0.1rem;
+}
+
+.main-menu li {
+  font-size: 1rem;
+  list-style: none;
+  display: inline;
+}
+
+.icon-sm i {
+  padding: 0.1rem 0.25rem;
+  border-radius: 50%;
+  box-shadow: 0rem 0rem 0.25rem rgba(0, 0, 0, 0.2509803922);
+  color: #0075FF;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.feature .icon-f {
+  font-size: 10rem;
+  color: #0075FF;
+}
+.feature .description {
+  text-align: center;
+}
+.feature .description p {
+  color: #888;
+}
+.feature .cta {
+  font-weight: 600;
+  color: #0075FF;
+}
+
+.icon-desc .icon {
+  font-size: 8rem;
+  color: #0075FF;
+  padding: 0;
+}
+.icon-desc .title {
+  font: 0.75rem;
+}
+
+:root {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
