@@ -1,5 +1,17 @@
 @use "components";
+@use "maxins" as default;
+// NAV
+
+@use "navstyles";
+// MAIN
+@use "home";
+// Features 
+@use "features";
 :root {
  box-sizing: border-box;
  margin: 0;
 }
+main {
+@include default.max-width();
+}
+

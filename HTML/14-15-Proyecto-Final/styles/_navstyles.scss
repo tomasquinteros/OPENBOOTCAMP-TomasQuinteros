@@ -1,0 +1,24 @@
+@use "maxins" as variables;
+
+.nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: auto;
+ padding: 1rem;
+ border-bottom: 1px solid variables.$secondary-color;
+ img {
+  width: 10rem;
+ }
+ .main-menu {
+  li {
+   a {
+    color: variables.$color-main;
+    text-decoration: none;
+    &:hover {
+     color: black;
+    }
+   }
+  }
+ }
+}
