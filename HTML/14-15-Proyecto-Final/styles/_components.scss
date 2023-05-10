@@ -44,15 +44,6 @@
  }
 }
 
-.main-menu {
- margin: 0;
- li {
-  font-size: 1rem;
-  list-style: none;
-  display: inline;
-  padding: 0 1rem;
- }
-}
 .icon-sm {
  i {
   padding: 0.1rem 0.25rem;
@@ -63,13 +54,18 @@
 }
 
 .icon-desc {
- .icon {
-  font-size: 8rem;
+ i {
+  font-size: 7rem;
   color: default.$color-main;
   padding: 0;
  }
- .title {
-  font: 0.75rem;
-
+} 
+.description {
+ p {
+  color: #888;
  }
+}
+.cta {
+ font-weight: 600;
+ color: default.$color-main;
 }

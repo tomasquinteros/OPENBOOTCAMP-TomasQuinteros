@@ -35,16 +35,6 @@
   padding: 0.1rem 0.1rem;
 }
 
-.main-menu {
-  margin: 0;
-}
-.main-menu li {
-  font-size: 1rem;
-  list-style: none;
-  display: inline;
-  padding: 0 1rem;
-}
-
 .icon-sm i {
   padding: 0.1rem 0.25rem;
   border-radius: 50%;
@@ -52,13 +42,19 @@
   color: #0075FF;
 }
 
-.icon-desc .icon {
-  font-size: 8rem;
+.icon-desc i {
+  font-size: 7rem;
   color: #0075FF;
   padding: 0;
 }
-.icon-desc .title {
-  font: 0.75rem;
+
+.description p {
+  color: #888;
+}
+
+.cta {
+  font-weight: 600;
+  color: #0075FF;
 }
 
 .nav {
@@ -72,6 +68,15 @@
 .nav img {
   width: 10rem;
 }
+.nav .main-menu {
+  margin: 0;
+}
+.nav .main-menu li {
+  display: inline;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  list-style: none;
+}
 .nav .main-menu li a {
   color: #0075FF;
   text-decoration: none;
@@ -80,11 +85,22 @@
   color: black;
 }
 
+@media (max-width: 1100px) {
+  .nav .main-menu {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .nav img {
+    width: 6rem;
+  }
+}
 .home {
-  margin: 4rem auto;
+  margin-top: 4rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 .home .home-cta {
   width: 20rem;
@@ -122,36 +138,161 @@
   outline-color: #8b8b8b;
 }
 
+@media (max-width: 600px) {
+  .home {
+    text-align: center;
+  }
+  .home .home-img {
+    display: none;
+  }
+}
 .features {
   display: flex;
   flex-direction: column;
   margin: auto;
   align-items: center;
 }
-
-.flex-features {
+.features .intro h3 {
+  font-weight: bold;
+}
+.features .flex-features {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.flex-features .image {
-  flex: 1;
-}
-
-.feature {
+.features .feature {
   display: flex;
-  width: 20rem;
+  justify-content: start;
+  gap: 1rem;
 }
-.feature .icon-f {
+.features .feature .icon-f {
   font-size: 10rem;
   color: #0075FF;
 }
-.feature .description p {
-  color: #888;
+.features .image {
+  width: 100%;
 }
-.feature .cta {
+.features .image img {
+  width: 100%;
+}
+
+.benefits {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.benefits .intro h3 {
+  font-size: 2rem;
   font-weight: 600;
+}
+.benefits .intro p {
+  color: #4d4d4d;
+}
+.benefits .benefit-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.benefits .benefit-cards .benefit {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.benefits .benefit-cards .benefit i {
+  font-size: 8rem;
   color: #0075FF;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .benefits .benefit-cards {
+    flex-direction: column;
+  }
+  .benefits .benefit-cards .benefit i {
+    font-size: 4rem;
+  }
+}
+.kpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-content: space-between;
+  text-align: center;
+  background-color: #0075FF;
+  padding: 2rem 0;
+}
+.kpis .kpi {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.kpis .kpi .number {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.kpis .kpi .desc {
+  color: #eee;
+  font-size: 0.75rem;
+}
+
+.onboarding {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.onboarding .intro h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.onboarding .steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.onboarding .steps .step-separator {
+  padding: 0.1rem 3rem;
+  background-color: rgba(136, 136, 136, 0.3960784314);
+}
+.onboarding .steps .title {
+  margin-top: -1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4d4d4d;
+}
+
+@media (max-width: 600px) {
+  .onboarding .steps {
+    flex-direction: column;
+  }
+  .onboarding .steps .icon-desc i {
+    font-size: 4rem;
+  }
+  .onboarding .steps .step-separator {
+    padding: 3rem 0.1rem;
+  }
+}
+footer {
+  background-color: #eee;
+}
+footer .footer-cta {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+  padding: 2rem;
+}
+footer .footer-cta .cta-title {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0;
+}
+footer .footer-cta .cta-description {
+  font-size: 1.2rem;
 }
 
 :root {
@@ -159,8 +300,16 @@
   margin: 0;
 }
 
+body {
+  margin: 0;
+}
+
 main {
-  max-width: 1200px;
+  max-width: 720px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

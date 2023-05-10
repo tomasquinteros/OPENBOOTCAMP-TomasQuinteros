@@ -7,11 +7,27 @@
 @use "home";
 // Features 
 @use "features";
+//Benefits
+@use "benefits";
+//KPIS
+@use "kpis.scss";
+// Onboarding
+@use "onboarding";
+//Footer
+@use "footer";
+
 :root {
  box-sizing: border-box;
  margin: 0;
 }
+body {
+ margin: 0
+}
 main {
 @include default.max-width();
+margin: auto;
+display: flex;
+flex-direction: column;
+gap: 4rem;
 }
 

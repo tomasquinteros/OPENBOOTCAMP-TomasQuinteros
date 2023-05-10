@@ -1,0 +1,23 @@
+@use "maxins" as default;
+
+.kpis {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ place-content: space-between;
+ text-align: center;
+ background-color: default.$color-main;
+ padding: 2rem 0;
+ .kpi {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  .number {
+   font-size: 3rem;
+   font-weight: bold;
+  }
+  .desc {
+   color: default.$secondary-color;
+   font-size: 0.75rem;
+  }
+ }
+}

@@ -5,29 +5,27 @@
  flex-direction: column;
  margin: auto;
  align-items: center;
-}
+ .intro {
+  h3 {font-weight: bold};
+ }
 .flex-features {
  display: flex;
  justify-content: center;
  align-items: center;
- .image {
-  flex: 1;
- }
 }
 .feature {
  display: flex;
- width: 20rem;
+ justify-content: start;
+ gap: 1rem;
  .icon-f {
   font-size: 10rem;
   color: default.$color-main;
  }
- .description {
-  p {
-   color: #888;
-  }
+}
+.image {
+ width: 100%;
+ img {
+  width: 100%;
  }
- .cta {
-  font-weight: 600;
-  color: default.$color-main;
- }
+}
 }

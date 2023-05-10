@@ -1,0 +1,21 @@
+@use "maxins" as default;
+footer {
+ background-color: default.$secondary-color;
+ .footer-cta {
+  @include default.max-width();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+  padding: 2rem;
+  .cta-title {
+   font-size: 4rem;
+   font-weight: 600;
+   margin: 0;
+  }
+  .cta-description {
+   font-size: 1.2rem;
+  }
+ }
+}

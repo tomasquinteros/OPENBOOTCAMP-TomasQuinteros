@@ -2,10 +2,11 @@
 
 
 .home {
- margin: 4rem auto;
+ margin-top: 4rem;
  display: flex;
  flex-direction: row;
  align-items: center;
+ justify-content: space-between;
  .home-cta {
   width: 20rem;
   display: flex;
@@ -40,6 +41,15 @@
     outline-color: #8b8b8b;
    }
    }
+  }
+ }
+}
+
+@media (max-width: 600px) {
+ .home {
+  text-align: center;
+  .home-img {
+   display: none;
   }
  }
 }
