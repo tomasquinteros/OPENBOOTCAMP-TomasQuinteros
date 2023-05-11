@@ -1,0 +1,14 @@
+{
+  "name": "first-project",
+  "version": "1.0.0",
+  "description": "Mi primer proyecto de JS con NodeJS en OpenBootcamp",
+  "main": "index.js",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TomasQuinteros dev",
+  "license": "ISC"
+}
