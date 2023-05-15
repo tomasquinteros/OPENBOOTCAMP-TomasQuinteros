@@ -23,5 +23,5 @@ console.log(text1.charAt(2));
 // Si es una cadena de texto podes buscar primero la cadena y su posicion para poder luevo buscar el caracter de esa cadena
 console.log(texto.indexOf("tomas")); // => nos busca la primera instancia con ese valor
 console.log(texto.lastIndexOf("tomas")) // => nos busca la ultima instancia con ese valor.
-console.log(texto.charAt(15))
+console.log(texto.charAt());
 

@@ -1,7 +1,7 @@
 let text = "Mi nombre es tomás quinteros"
 
 // .lenght => Se utiliza para saber el tamaño de nuestra variable string (tmb se utiliza en arrays)
-console.log(text.length());
+console.log(text.length);
 
 // .slice => Se utiliza para saber donde queremos que comience nuestro string, sabiendo el tamaño de nuestro string podemos decir de donde arranca
 console.log(text.slice(2, 10)) // aca le decimos que comienza desde la posicion dos y termina en la posicion 10.
@@ -21,4 +21,3 @@ console.log(text.replace("tomás", "Quinteros")); // => en el primer parametro l
  
  let text_long = "Me llamo tomas, soy de carlos paz, estudio programacion, soy una persona muy tranquila."
  console.log(text_long.replace(/soy/g, "SOY"));
-
