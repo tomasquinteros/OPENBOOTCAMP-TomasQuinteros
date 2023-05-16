@@ -15,4 +15,11 @@ const object = [
 ]
 console.log(object.filter(persona => persona.age > 30));
 
-// .reduce()
+// .reduce() ==> Obtener un valor a partir de una lista
+const valores = [2, 53, 6, 8,56, 86, 10, -10];
+const suma = valores.reduce((acumulado, current) => { // ==> se le puede pasar 4 parametros => el primero es donde se acumulara, en el segundo son los datos que estan por pasar, el tercero es el indice, el cuarto es el array
+ console.log(acumulado);
+ console.log(current);
+ return acumulado + current;
+})
+console.log(suma);
