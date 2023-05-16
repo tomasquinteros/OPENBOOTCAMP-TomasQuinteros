@@ -15,11 +15,11 @@ console.log(array[0]);
 // METODOS PARA ELIMINAR VALORES DEL ARRAY
  // ==> Tambien mutan el array!
   // .pop() ==> Elimina el valor de la ultima posicion;
-   array.pop();
-   console.log(array);
+    array.pop();
+    console.log(array);
   // .shift() ==> Elimina la primera posicion de la posicion
-   array.shift();
-   console.log(array);
+    array.shift();
+    console.log(array);
 
 // METODO .splice(x, y, z) ==> Metodo para eliminar, modificar o añadir valores en nuestro array
 const array2 = [1, 2, 4, 6, 3, 2, 5];
