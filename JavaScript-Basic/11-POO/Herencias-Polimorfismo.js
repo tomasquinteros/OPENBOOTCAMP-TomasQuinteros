@@ -9,11 +9,8 @@ class Persona {
     this.#age = age
     this._isDeveloper = isDeveloper
   }
-  getName() {
-    return this.#name
-  }
-  getAge() {
-    return this.#age
+  getData() {
+    return console.log(`Mi nombre es ${this.#name}, tengo ${this.#age}`)
   }
 }
 
@@ -23,7 +20,8 @@ class Desarrollador extends Persona {
     this.lenguaje = lenguaje
   }
   getData() {
-    return `Mi nombre es ${this.getName()}, tengo ${this.getAge()} y uso de lenguaje a ${this.lenguaje}`
+    super.getData();
+    return console.log(`Mi lenguaje es ${this.lenguaje}`);
   }
 }
 
