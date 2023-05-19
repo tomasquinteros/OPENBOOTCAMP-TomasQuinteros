@@ -15,5 +15,6 @@ console.log(withinSpaces);
 let isNameInStudent = student.includes(name_);
 console.log(isNameInStudent);
 
+console.log('Tomas');
 
 

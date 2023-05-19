@@ -1,0 +1,15 @@
+{
+  "name": "ejercicio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ejercicio.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.40.0"
+  }
+}
