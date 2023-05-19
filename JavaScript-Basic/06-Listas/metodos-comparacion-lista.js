@@ -9,8 +9,8 @@ console.log(array.every(element => element > 0))
 const array1 = [1, 3, 5, 6];
 const array2 = [1, 3, 5, 6];
 function compare(array1, array2) {
- if (array1.length !== array2.length) return console.log("false");
- const res = array1.every((element, index) => element === array2[index] ? true : false);
- return console.log(res);
+  if (array1.length !== array2.length) return console.log("false");
+  const res = array1.every((element, index) => element === array2[index] ? true : false);
+  return console.log(res);
 }
 compare(array1, array2);

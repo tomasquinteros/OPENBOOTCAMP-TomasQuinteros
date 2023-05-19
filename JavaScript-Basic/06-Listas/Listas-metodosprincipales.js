@@ -21,13 +21,15 @@ console.log(array[0]);
     array.shift();
     console.log(array);
 
+
+
 // METODO .splice(x, y, z) ==> Metodo para eliminar, modificar o añadir valores en nuestro array
 const array2 = [1, 2, 4, 6, 3, 2, 5];
  // Eliminar valores .splice(indice, valores a elminar)
   array2.splice(2, 1); // ==> en la x le ponemos desde donde queremos que nos elimine, en la y la cantidad de elementos que se encuentra a partir de la x
   console.log(array2);
  // Añadir valores .splice(indice, 0, valor)
-  array2.splice(2, 0, "Tomas", "Juan");
+  array2.splice(2, 0, "Tomas", "Juan", "Quinteros");
   console.log(array2);
  // Modificar valor .splice(indice, 1, valor)
   array2.splice(2, 1, 3);

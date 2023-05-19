@@ -12,12 +12,12 @@ console.log(array.sort((a,b) => b - a)) // OTRA FORMA DE ACOMODAR DE MAYOR A MEN
 
 // Cambiar este objeto de menor a mayor con sort()
 const object = [
- { name: "Tomas", age: 25 },
- {name: "Juan", age:20 },
- {name: "Victor", age:60 },
- {name: "Salvador", age:22 },
- {name: "Zoe", age:23 },
- {name: "Mirko", age:22 }
+  { name: "Tomas", age: 25 },
+  {name: "Juan", age:20 },
+  {name: "Victor", age:60 },
+  {name: "Salvador", age:22 },
+  {name: "Zoe", age:23 },
+  {name: "Mirko", age:22 }
 ]
 
 object.sort((a, b) => a.age - b.age);
