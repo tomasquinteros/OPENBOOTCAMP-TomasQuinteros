@@ -1,0 +1,7 @@
+Hay tres formas de almacenar el storage:
+
+Cookies ==> Capacidad -> 4kb , Browsers -> HTML4 & HTML5 , Accesibilidad -> Cualquier ventana del navegador , Expira -> Manual , Localizacion de storage -> Browser & servidor
+
+Local Storage ==> Capacidad -> 10mb , Browsers -> HTML5 , Accesibilidad -> Cualquier ventana del navegador , Expira -> Nunca , Localizacion de storage -> Browser
+
+Sesion Storage ==> Capacidad -> 5mb , Browsers -> HTML5 , Accesibilidad -> Misma ventana , Expira -> Al cerrar la ventana , Localizacion de storage -> Browser
