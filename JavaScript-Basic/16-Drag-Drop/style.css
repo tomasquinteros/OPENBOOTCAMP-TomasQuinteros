@@ -1,0 +1,14 @@
+
+.section {
+    background-color: #ccc;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.parrafo {
+    background-color: white;
+    padding: 1rem;
+}
+.parrafo.dragging {
+    opacity: 0.4;
+}
