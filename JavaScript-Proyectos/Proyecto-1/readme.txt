@@ -1,0 +1,1 @@
+Change Background Color: Build a simple webpage that changes its background color when a button is clicked. This project helps you understand basic DOM manipulation and event handling.
