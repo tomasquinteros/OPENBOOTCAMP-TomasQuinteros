@@ -2,12 +2,29 @@ const inputTask = document.querySelector("input")
 const btnADD = document.querySelector(".btnSubmit")
 const tasks = document.querySelector(".ul-container");
 const empty = document.querySelector("span")
-const arrayTaskS = []
+const taskData = [];
+const getData = localStorage.getItem("data")
+
+if (getData) {
+  JSON.parse(getData).forEach(element => {
+    createElement(element.task)
+    taskData.push(element)
+  });
+}
 
 btnADD.addEventListener("click", event => {
   event.preventDefault();
   const text = inputTask.value;
-  arrayTaskS.push(text)
+  
+  if (text.length > 0) {
+    createElement(text)
+    addNewTask(text)
+  }
+  empty.style.display = "none"
+  inputTask.value = ""
+})
+
+function createElement(text) {
   const list = document.createElement("li");
   const parraf = document.createElement("p");
   parraf.textContent= text;
@@ -15,11 +32,11 @@ btnADD.addEventListener("click", event => {
   list.appendChild(addButtonDelete());
   list.appendChild(addCheckCompleted())
   tasks.appendChild(list)
-  empty.style.display = "none"
-  inputTask.value = ""
-  localStorage.setItem("items", arrayTaskS);
-})
-
+}
+function addNewTask (text) {
+  taskData.push({task: text})
+  localStorage.setItem("data", JSON.stringify(taskData))
+}
 function addButtonDelete () {
   const btnDel = document.createElement("button")
   const liQuantities = document.querySelectorAll("li").length;
@@ -48,104 +65,3 @@ function addCheckCompleted () {
   })
   return inputCompleted;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* const arrayTask = [{task: "Hola hola", isCompleted: false}, {task: "Juan", isCompleted:true}]
-renderInHTML(arrayTask)
-
-
-form.addEventListener("submit", e =>  {
-  e.preventDefault();
-  const data = document.getElementById("newTask")
-  addTodo(data.value.trim())
-})
-
-
-function addTodo (newTask) {
-  const task = {
-    task: newTask,
-    isCompleted: false
-  }
-  arrayTask.push(task);
-  renderInHTML(arrayTask)
-}
-
-function renderInHTML (arrayTask) {
-  const element = document.createElement("div");
-  element.classList.add("task")
-  arrayTask.map((value, index) => {
-      element.innerHTML = `
-      <div id="${index}">
-      <input type="checkbox" id="completed" isTrusted="${value.isCompleted}"/>
-      <button>X</button>
-      </div>
-      <h2>${value.task}</h2>
-      `
-    }
-    )
-    tasks.append(element)
-} */
