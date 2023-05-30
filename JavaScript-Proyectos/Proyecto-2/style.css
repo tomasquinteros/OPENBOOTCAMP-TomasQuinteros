@@ -15,19 +15,34 @@
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  width: 600px;
   justify-content: center;
-  align-items: center;
 }
-
-.task {
-  min-width: 200px;
+section.controlers {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ul-container {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.ul-container li {
+  background-color: #ccc;
+  padding: 0.25rem 2rem;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-
+.ul-container li p {
+  flex: 1;
+}
