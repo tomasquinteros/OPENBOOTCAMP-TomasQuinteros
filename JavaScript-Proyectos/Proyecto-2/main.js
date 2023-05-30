@@ -27,6 +27,7 @@ btnADD.addEventListener("click", event => {
 function createElement(text) {
   const list = document.createElement("li");
   const parraf = document.createElement("p");
+  parraf.classList.add("task-parraf")
   parraf.textContent= text;
   list.appendChild(parraf)
   list.appendChild(addButtonDelete());
@@ -43,6 +44,16 @@ function addButtonDelete () {
   btnDel.classList.add = "deleteBTN";
   btnDel.addEventListener("click", event => {
     const list = event.target.parentElement;
+    const p = list.querySelector("p.task-parraf").textContent;
+    console.log(taskData)
+    
+    for (let i=0; i < taskData.length; i++) {
+      if (taskData[i].task === p) {
+        taskData.splice(i, 1);
+      }
+    }
+    localStorage.setItem("data", JSON.stringify(taskData))
+    console.log(taskData)
     tasks.removeChild(list);
     if (liQuantities === 0) {
       empty.style.display = "block"
