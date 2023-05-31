@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>TO DO LIST...</h1>
-    <section class="controlers">
-      <form>
+    <h1>TO DO LIST</h1>
+    <div class="container">
+      <section class="controlers">
+        <form>
         <input type="text" placeholder="add new task...">
-        <button type="submit" class="btnSubmit">add+</button>
+        <button type="submit" class="btnSubmit">ADD</button>
       </form>
-      <div>
-        <button>
-          Clear all
-        </button>
-      </div>
     </section>
     <section id="sec-task">
       <div class="tasks">
@@ -27,6 +26,8 @@
         No se han encontrado tareas
       </span>
     </section>
+    <span style="padding: 2rem;">Creado por <a style="text-decoration: none; color: white;" href="https://www.linkedin.com/in/tomasquinteros-dev/">Tomas Quinteros</a></span>
+  </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
