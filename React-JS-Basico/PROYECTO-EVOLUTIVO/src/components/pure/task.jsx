@@ -4,25 +4,25 @@ import {Task} from '../../models/task.class'
 
 function TaskComponent({task}) {
   return (
-    <div>
-      <h2>
-        Name:  { task.name }
-      </h2>
-      <h3>
-        Description: { task.description }
-      </h3>
-      <h4>
-        Level: { task.level }
-      </h4>
-      <h5>
-        This task is: { task.completed ? 'COMPLETED' : 'PENDING'}
-      </h5>
-    </div>
+    <tr>
+      <td>
+        { task.name }
+      </td>
+      <td>
+        { task.description }
+      </td>
+      <td>
+        { task.level }
+      </td>
+      <td>
+        { task.completed ? 'COMPLETED' : 'PENDING'}
+      </td>
+    </tr>
   )
 }
 
 TaskComponent.propTypes = {
-  task: PropTypes.instanceOf(Task)
+  task: PropTypes.instanceOf(Task).isRequired
 }
 
 export default TaskComponent
