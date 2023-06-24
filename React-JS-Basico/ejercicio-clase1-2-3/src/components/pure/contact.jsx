@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Contact } from '../../models/contact.class'
-import { useState } from 'react'
 
-function ContactComponent({contact}) {
+
+const tomas = () => {
+  return console.log("tomas")
+}
+
+console.log(tomas)
+function ContactComponent ({contact}) {
   const [conected, setConected] = useState(contact.conected)
-  function changeConected() {
+  function changeConected () {
     contact.conected = !conected
     setConected(!conected)
   }
@@ -19,11 +24,11 @@ function ContactComponent({contact}) {
         {contact.lastname}
       </p>
       <p>
-        { contact.email }
+        {contact.email} 
       </p>
       <span>
-        { contact.conected ? 'Contact online' : 'Contact offline' }
-        <input type="checkbox" onClick={changeConected} />
+        {contact.conected ? 'Contact online' : 'Contact offline'}
+        <input type='checkbox' onClick={ changeConected } />
       </span>
     </div>
   )
