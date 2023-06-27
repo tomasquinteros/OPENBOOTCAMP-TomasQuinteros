@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Contacts } from "../../models/contacts.class"
 import { ContactComponent } from "../pure/contacts"
+import { FormContacts } from "../pure/formContacts"
 
 export default function ContactList() {
     const defaultContacts = new Contacts('Tomás', 'Quinteros', true, 'tomassaidquinteros@gmail.com')
@@ -28,8 +29,8 @@ export default function ContactList() {
     }
 
     return (
-        <div className='w-2/4 flex flex-col items-center justify-center gap-8'>
-            <div>
+        <div className='w-3/4 flex flex-col items-center justify-center gap-8'>
+            <div className="w-full">
             <div className='p-8 bg-slate-200 w-full text-center border-2 border-gray-300'>
                 <h1>Contacts</h1> 
             </div>
@@ -44,11 +45,12 @@ export default function ContactList() {
                 </thead>
                 <tbody>
                 {
-                    contacts.map((value, index) => <ContactComponent key={index} contact={value} add={addContact} remove={deleteContact} state={state} />)
+                    contacts.map((value, index) => <ContactComponent key={index} contact={value} remove={deleteContact} state={state} />)
                 }
                 </tbody>
             </table>
             </div>
+            <FormContacts add={addContact}/>
         </div>
     )
     }

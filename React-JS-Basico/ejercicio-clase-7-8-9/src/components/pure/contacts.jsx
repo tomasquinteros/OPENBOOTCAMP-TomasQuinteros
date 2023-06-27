@@ -21,7 +21,7 @@ export const ContactComponent = ({contact, remove, state}) => {
                 </p>
             </td>
             <td className='mx-auto'>
-                { contact.completed ? 
+                { contact.state ? 
                     <button onClick={() => state(contact)} className='text-green-500'>
                     <ToggleOnIcon/>
                     </button> : 
