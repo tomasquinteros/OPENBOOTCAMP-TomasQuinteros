@@ -1,0 +1,8 @@
+La idea es tener un controlador y una vista, donde en la vista que en nuestro caso es el folder Page solamente cargue nuestros componentes. 
+
+Donde nuestros componentes de tipo contenedor tendran la logica y la informacion que no tienen los puros y en nuestros componentes de tipo page cargan nuestros componentes de tipo contenedor que ellos cargan a los puros.
+
+
+La diferencia entre Container y Vista ==> es que pages puede contener más de un componente contenedor, mientras que un componente contenedor engloba un componente puro para pasarle diferente informacion y det logica.
+
+De esta forma es más Escalable.

@@ -36,7 +36,7 @@ export default function TaskForm({add}) {
                     </select>
                 </li>
             </ul>
-            <button className="bg-slate-600 w-2/6 rounded-md p-2" type="submit">Add</button>
+            <button className="bg-slate-600 text-gray-200 w-2/6 rounded-md p-2" type="submit">Add</button>
         </form>
         
     )
