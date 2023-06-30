@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Task } from '../../models/task.class'
 import { LEVELS } from '../../models/levels.enum'
 import TaskComponent from '../pure/task'
@@ -11,6 +11,13 @@ export default function TaskListComponent() {
   const Task1 = new Task('Create app', 'Create app with create-react-app', false, LEVELS.URGENT)
   const Task2 = new Task('Continue with class React Basic', 'Continue with course of OpenBootcamp about React', false, LEVELS.BLOCKING)
   const [tasks, setTasks] = useState([defaultTask, Task1, Task2])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000);
+  }, [])
 
   function completeTask(task) {
     const index = tasks.indexOf(task) // Encontramos el index de donde se encuentra nuestra tarea
@@ -30,27 +37,38 @@ export default function TaskListComponent() {
     tempTasks.push(task)
     setTasks(tempTasks)
   }
+  const TaskTable = () => {
+    return (
+    <table>
+      <thead>
+        <tr className='grid grid-cols-4 gap-4 p-2 place-items-center'>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Priority</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          loading ? (<p className='text-lg text-center p-4' >Loading your tasks</p>) :
+          tasks.map((values, index) => <TaskComponent key={index} task={values} complete={completeTask} remove={deleteTask}/>)
+        }
+      </tbody>
+  </table>
+  )
+  }
+
   return (
     <div className='w-2/4 flex flex-col items-center justify-center gap-8'>
       <div>
         <div className='p-8 bg-slate-200 w-full text-center border-2 border-gray-300'>
           <h1>Your Task</h1> 
         </div>
-        <table className='border-x-2 border-b-2 w-full'>
-          <thead>
-            <tr className='grid grid-cols-4 gap-4 p-2 place-items-center'>
-              <th>Title</th>
-              <th>Description</th>
-              <th>Priority</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              tasks.map((values, index) => <TaskComponent key={index} task={values} complete={completeTask} remove={deleteTask}/>)
-            }
-          </tbody>
-        </table>
+        <div className='border-x-2 border-b-2 w-full'>
+          {
+            tasks.length > 0 ? <TaskTable/> : <h2>There is no homework</h2>
+          }
+        </div>
       </div>
       <TaskForm add={addTask}/>
     </div>
