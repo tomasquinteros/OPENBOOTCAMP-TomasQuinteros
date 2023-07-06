@@ -3,10 +3,10 @@ import HomePage from './pages/home/HomePage'
 import NotFoundPage from './pages/404/NotFoundPage'
 import AboutPage from './pages/about-faqs/AboutPage'
 
-function MultiPath (element, ...paths) {
+function MultiPath(element, ...paths) {
     // ...paths => Se utiliza para crear
     // Creamos un multi path => cada path de los que ingresamos van a dirigirse a la misma pagina.
-    return paths.map(path => <Route key={path} path={path} element={ element }/>)
+    return paths.map(path => <Route key={path} path={path} element={element} />)
 }
 
 
@@ -22,7 +22,7 @@ export default function AppRountingOne() {
                 <main>
                     <Routes>
                         <Route path='/' element={<HomePage />} />
-                        {MultiPath(<AboutPage/>, '/about', 'faqs')}
+                        {MultiPath(<AboutPage />, '/about', 'faqs')}
                         {/* 404 - NOT FOUND!! */}
                         <Route path='*' element={<NotFoundPage />} />
                     </Routes>
